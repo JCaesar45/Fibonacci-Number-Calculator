@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci Number Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/fibonacci-sequence.png" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Fibonacci Number Calculator</h1>
+            <p class="tagline">A modern approach to computing Fibonacci numbers with elegance</p>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <p>
+                Welcome! This interactive webpage demonstrates a dynamic programming approach to calculating the <strong>n-th Fibonacci number</strong>. Whether you're a developer or a curious learner, explore the simplicity and power of efficient algorithms.
+            </p>
+        </div>
+    </section>
+
+    <section class="calculator">
+        <div class="container">
+            <h2>Calculate Fibonacci Number</h2>
+            <div class="input-group">
+                <label for="numberInput">Enter a positive integer (n):</label>
+                <input type="number" id="numberInput" min="0" max="1000" placeholder="e.g., 10" />
+            </div>
+            <button id="calculateBtn">Calculate</button>
+            <div class="result" id="resultDisplay"></div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>About the Algorithm</h2>
+            <p>
+                This project uses a <em>dynamic programming</em> approach, which stores computed Fibonacci numbers in a list to avoid redundant calculations. It ensures fast, reliable results for large inputs without recursion.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fibonacci Calculator | Designed by Jordan Leturgez</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
