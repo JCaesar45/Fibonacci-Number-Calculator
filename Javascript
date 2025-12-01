@@ -1,0 +1,28 @@
+// Fibonacci function implementing dynamic programming
+function fibonacci(n) {
+    const sequence = [0, 1];
+
+    if (n === 0) return 0;
+    if (n === 1) return 1;
+
+    for (let i = 2; i <= n; i++) {
+        sequence.push(sequence[i - 1] + sequence[i - 2]);
+    }
+
+    return sequence[n];
+}
+
+// DOM Elements
+const calculateBtn = document.getElementById('calculateBtn');
+const resultDisplay = document.getElementById('resultDisplay');
+const numberInput = document.getElementById('numberInput');
+
+calculateBtn.addEventListener('click', () => {
+    const n = parseInt(numberInput.value);
+    if (isNaN(n) || n < 0 || n > 1000) {
+        resultDisplay.innerHTML = `<span style="color:red;">Please enter a valid number between 0 and 1000.</span>`;
+        return;
+    }
+    const fibNumber = fibonacci(n);
+    resultDisplay.innerHTML = `The <strong>${n}</strong>-th Fibonacci number is: <span style="color:#4a90e2;">${fibNumber}</span>`;
+});
